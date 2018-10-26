@@ -5,7 +5,6 @@
         return;
     }
 
-    require_once('../core/db.php');
     require_once('../model/maintenance.php');
 ?>
 <!DOCTYPE html>
