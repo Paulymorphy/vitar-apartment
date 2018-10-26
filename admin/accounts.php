@@ -146,8 +146,8 @@
                                             echo "<td>" . str_replace("_", " ",$element['fullname']) . "</td>";
                                             echo "<td>" . $element['contact'] . "</td>";
                                             echo "<td>" . $element['username'] . "</td>";
-                                            echo "<td><button class='btn btn-success' data-id=" . $element['id'] . ">Edit</button>&nbsp";
-                                            echo "<button class='btn btn-danger' data-id=" . $element['id'] . ">Delete</td>";
+                                            echo "<td><button class='btn btn-success' data-toggle='modal' data-target='#myModalEdit' data-id=" . $element['id'] . ">Edit</button>&nbsp";
+                                            echo "<button class='btn btn-danger' data-toggle='modal' data-target='#myModalDelete' data-id=" . $element['id'] . ">Delete</td>";
                                             echo "</tr>";
                                         }
                                   ?>
@@ -158,7 +158,86 @@
                </div><!-- /col-lg-4 -->			
 		  	</div><!-- /row -->
 		  	
+<!--Edit Modal -->
+<div id="myModalEdit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!--Edit Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #18D0FF">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Accounts</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+            <div class = "form-group">
+                <label> No: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="EditID" name ="txtDescription" required>
+            </div>
+            <div class = "form-group">
+                <label> Name: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+            </div>
+            <div class = "form-group">
+                <label> Contact Number: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="EditContact" name ="txtDescription" required>
+            </div>
+            <div class = "form-group">
+                <label> Email: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="EditEmail" name ="txtRate" required>
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">SAVE</button>
+        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal End -->
+
+<!--Delete Modal -->
+<div id="myModalDelete" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Delete Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #18D0FF">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Delete Accounts</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+
+            <div class = "form-group">
+                <label> No: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="DeleteID" name ="txtDescription" disabled>
+            </div>
+            <div class = "form-group">
+                <label> Name: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="DeleteName" name ="txtRate" disabled>
+            </div>
+            <div class = "form-group">
+                <label> Contact Number: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="DeleteContact" name ="txtDescription" disabled>
+            </div>
+            <div class = "form-group">
+                <label> Email: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="DeleteEmail" name ="txtRate" disabled>
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class = "btn btn-danger" data-dismiss = "modal" id="SubmitDelete">DELETE</button>
+        <button type ="button" class = "btn btn-primary" data-dismiss = "modal"> CLOSE </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal End -->
 
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
