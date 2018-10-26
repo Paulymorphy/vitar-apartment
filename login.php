@@ -3,7 +3,9 @@
 <head>
 	<title>Vitar | Login </title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
+
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -20,9 +22,48 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <!--===============================================================================================-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
+
 </head>
 <body>
-	
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="../landing.html">VITAR ESTATE</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+        <ul class="clear">
+            <li class="active"><a href="landing.html">Home</a></li>
+            <li><a class="drop" href="#">Pages</a>
+              <ul>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/full-width.html">Full Width</a></li>
+                <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+                <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+                <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+              </ul>
+            </li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="residential.html">Residential</a></li>
+            <li><a href="parking.html">Parking</a></li>
+            <li><a class="drop" href="#">Tenant</a>
+              <ul>
+                <li><a href="t_history">History</a></li>
+                <li><a class="t_bill" href="#">Bill</a></li>
+                <li><a href="t_settings">Account Settings</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Register!</a></li>
+            <li><a href="login.php">Login</a></li>
+          </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">

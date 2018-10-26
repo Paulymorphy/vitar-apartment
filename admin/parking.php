@@ -122,7 +122,7 @@
 			  		<div class="col-lg-12">
                       <div class="content-panel">
                       <h4><i class="fa fa-angle-right"></i> Parking Space</h4>
-                      <button class = "btn btn-primary" style = "float:right">Create</button>
+                      <button type="button" style = "float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModalAdd">CREATE</button>
                           <section id="unseen">
                             <table class="table table-bordered table-striped table-condensed">
                               <thead>
@@ -138,8 +138,9 @@
                                             <td>01</td>
                                             <td>Kathyrine Bayrante</td>
                                             <td>09878356578</td>
-                                            <td><button class ="btn btn-success">Edit</button>
-                                            <button class ="btn btn-danger">Delete</button>
+                                            <td>
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalEdit">Edit</button>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete">Delete</button>
                                           </td>
                                         </tr>
                                         <tr>
@@ -175,7 +176,105 @@
                </div><!-- /col-lg-4 -->			
 		  	</div><!-- /row -->
 		  	
+<!--ADD Modal -->
+<div id="myModalAdd" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!--ADD Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #18D0FF">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create Parking Space</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+
+            <div class = "form-group">
+                <label> Description: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="AddDesc" name ="txtDescription" required>
+                <button></button>
+            </div>
+            <div class = "form-group">
+                <label> Rate: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="AddName" name ="txtRate" required>
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitAdd">ADD</button>
+        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal End -->
+
+<!--Edit Modal -->
+<div id="myModalEdit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Edit Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #18D0FF">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Parking Space</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+
+            <div class = "form-group">
+                <label> Description: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
+            </div>
+            <div class = "form-group">
+                <label> Rate: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">SAVE</button>
+        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal End -->
+
+<!--Delete Modal -->
+<div id="myModalDelete" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!--Delete Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #18D0FF">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Delete Parking Space</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+
+            <div class = "form-group">
+                <label> Description: </label>
+                <input type="textarea" placeholder="Description" class="form-control" id="DeleteDesc" name ="txtDescription" disabled>
+            </div>
+            <div class = "form-group">
+                <label> Rate: </label>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="DeleteName" name ="txtRate" disabled>
+            </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class = "btn btn-danger" data-dismiss = "modal" id="SubmitDelete">DELETE</button>
+        <button type ="button" class = "btn btn-primary" data-dismiss = "modal"> CLOSE </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal End -->
 
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
