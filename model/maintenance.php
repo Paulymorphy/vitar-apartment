@@ -31,15 +31,18 @@ function get_all_residential_rental(){
 }
 #endregion 
 
-#region creat
+#region create
 function add_rentable($data){
-    $sql = "CALL addRentable(:param1,:param2,:param3)";
-    $data = array($data['rent'], $data['type'], $data['description']);
-    $stm = prepareStatement($sql, $data);
+    $sql1 = "CALL addRentable(:param1,:param2,:param3, param4)";
+    $dataIn1 = array($data['rent'], $data['type'], $data['description'], $data['path']);
+    $stm1 = prepareStatement($sql1, $dataIn1);
+    
     try{
-        $stm->execute();
+        $stm1->execute();
     }catch(PDOException $e){
-
+        return new Error($e);
     }
+
+    return true;
 }
 #endregion
