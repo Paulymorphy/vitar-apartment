@@ -25,7 +25,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
         <!-- <li><a class="drop" href="#">Pages</a>
           <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
@@ -64,14 +64,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/landingBG.jpg');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <p>Donec feugiat faucibus massa</p>
-      <h2 class="heading">Ullamcorper libero ante ipsum vestibulum</h2>
-      <p>Metus euismod non porta nec adipiscing a leo morbi viverra nulla sit amet pharetra dictum lectus quam lobortis</p>
-      <footer><a class="btn" href="#">Porttitor</a></footer>
+      <h2 class="heading">Vitar Estate development Inc.</h2>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -84,44 +81,25 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Tellus sed interdum</h6>
-      <p>Mauris nec tortor lectus vehicula leo quis elementum.</p>
+      <h1 class="heading">RENTAL SPACES</h1>
     </div>
     <ul class="nospace group services">
       <li class="one_third first">
         <article class="infobox">
-          <h6 class="heading"><i class="fa fa-joomla"></i> <a href="#">Elementum</a></h6>
-          <p>Risus diam vel erat sed ligula nisl dictum quis tempus eu dictum sit amet tortor [&hellip;]</p>
+          <h6 class="heading"><i class="fa fa-joomla"></i> <a href="commercial.php">Commercial</a></h6>
+          <p>We offer commercial spaces for your business. The price ranges from P12,000 to P 35,000 per month.</p>
         </article>
       </li>
       <li class="one_third">
         <article class="infobox">
-          <h6 class="heading"><i class="fa fa-key"></i> <a href="#">Porttitor</a></h6>
-          <p>Nulla lacinia vulputate augue pellentesque mattis nibh ut metus aenean sit amet [&hellip;]</p>
+          <h6 class="heading"><i class="fa fa-key"></i> <a href="residential.php">Residential</a></h6>
+          <p>We offer residential spaces for you and your family. The price ranges from P7,000 to P 15,000 per month.</p>
         </article>
       </li>
       <li class="one_third">
         <article class="infobox">
-          <h6 class="heading"><i class="fa fa-balance-scale"></i> <a href="#">Habitasse</a></h6>
-          <p>Turpis non dui molestie auctor suspendisse lorem morbi commodo vulputate lorem [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third first">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-mixcloud"></i> <a href="#">Sollicitudin</a></h6>
-          <p>Aenean porta vestibulum blandit pede pellentesque ac ipsum vel massa imperdiet [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-bug"></i> <a href="#">Facilisis</a></h6>
-          <p>Semper donec mi odio vehicula vel euismod vel suscipit at velit suspendisse lacinia [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-pied-piper-alt"></i> <a href="#">Adipiscing</a></h6>
-          <p>In diam aenean erat orci mollis quis gravida sed mollis a quam nullam justo massa [&hellip;]</p>
+          <h6 class="heading"><i class="fa fa-pied-piper-alt"></i> <a href="parking.php">Parking</a></h6>
+          <p>We offer parking spaces for your cars. The price ranges from P2,000 to P 2,500 per month. </p>
         </article>
       </li>
     </ul>
@@ -133,48 +111,24 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/demo/backgrounds/02.png');">
+<div class="wrapper bgded overlay">
   <div class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="flexslider testimonials">
       <ul class="slides">
         <li>
-          <article><img class="circle" src="images/demo/100x100.png" alt="">
-            <blockquote>adipiscing a convallis ultricies luctus et dolor integer consectetuer lacus sit amet aliquet consequat metus eros volutpat leo id auctor elit lorem eu orci sed augue class aptent taciti sociosqu ad.</blockquote>
-            <ul class="nospace starating">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            <h6 class="heading">Jane Doe</h6>
+          <article><img src='assets/images/commercial_1.jpg' alt="">
+            <h6 class="heading">COMMERCIAL SPACES</h6>
           </article>
         </li>
         <li>
-          <article><img class="circle" src="images/demo/100x100.png" alt="">
-            <blockquote>litora torquent per conubia nostra per inceptos himenaeos proin convallis metus sit amet odio mauris molestie diam at magna donec suscipit arcu quis volutpat accumsan velit justo venenatis orci nec.</blockquote>
-            <ul class="nospace starating">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-half-o"></i></li>
-              <li><i class="fa fa-star-o neutral"></i></li>
-            </ul>
-            <h6 class="heading">John Doe</h6>
+          <article><img src='assets/images/residential.jpg' alt="">
+            <h6 class="heading">RESIDENTIAL SPACES</h6>
           </article>
         </li>
         <li>
-          <article><img class="circle" src="assets/images/demo/100x100.png" alt="">
-            <blockquote>imperdiet odio lorem euismod tellus proin commodo sollicitudin eros fusce non lectus aliquam erat volutpat in molestie sed consectetuer sed imperdiet facilisis urna vivamus aliquet commodo diam cras.</blockquote>
-            <ul class="nospace starating">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o neutral"></i></li>
-              <li><i class="fa fa-star-o neutral"></i></li>
-              <li><i class="fa fa-star-o neutral"></i></li>
-            </ul>
-            <h6 class="heading">Jen Doe</h6>
+          <article><img src='assets/images/parking.jpg' alt="">
+            <h6 class="heading">PARKING SPACES</h6>
           </article>
         </li>
       </ul>
@@ -185,102 +139,25 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row2">
-  <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="sectiontitle">
-      <h6 class="heading">Lectus molestie porttitor</h6>
-      <p>Donec accumsan ligula vitae magna mauris neque phasellus.</p>
-    </div>
-    <ul class="nospace group elements">
-      <li class="one_third first">
-        <article><a href="#"><i class="fa fa-clipboard"></i></a>
-          <h6 class="heading">Justo pellentesque</h6>
-          <p>Quis iaculis scelerisque diam nisl pulvinar risus at fringilla sem augue in nulla [&hellip;]</p>
-          <footer><a href="#">Read More &raquo;</a></footer>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-skyatlas"></i></a>
-          <h6 class="heading">Orci vitae vehicula</h6>
-          <p>Morbi semper metus ac pulvinar adipiscing dui justo gravida arcu et venenatis justo [&hellip;]</p>
-          <footer><a href="#">Read More &raquo;</a></footer>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-empire"></i></a>
-          <h6 class="heading">Auctor luctus diam</h6>
-          <p>Lacus ut nisi maecenas ultrices neque a nisl nunc lorem diam rhoncus aliquet sit [&hellip;]</p>
-          <footer><a href="#">Read More &raquo;</a></footer>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-    <div class="clear"></div>
-  </section>
-</div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="sectiontitle">
-      <h6 class="heading">Volutpat mollis vivamus</h6>
-      <p>Pharetra libero non facilisis imperdiet mi augue feugiat.</p>
-    </div>
-    <ul class="nospace group">
-      <li class="one_half first">
-        <article class="group">
-          <div class="one_half first"><a href="#"><img src="assets/images/demo/320x240.png" alt=""></a></div>
-          <div class="one_half">
-            <h3 class="heading font-x1">Amet sodales tellus</h3>
-            <p>Nisl sit amet mollis enim velit posuere metus nam tempus odio in erat integer ante risus tempor quis ultrices quis [&hellip;]</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_half">
-        <article class="group">
-          <div class="one_half first"><a href="#"><img src="assets/images/demo/320x240.png" alt=""></a></div>
-          <div class="one_half">
-            <h3 class="heading font-x1">Fringilla non augue</h3>
-            <p>Et turpis morbi mi neque facilisis sollicitudin faucibus ac primis in faucibus orci luctus et ultrices posuere cubilia [&hellip;]</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-    <div class="clear"></div>
-  </section>
-</div>
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
+<footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <h6 class="heading">Lalapeden</h6>
-    <p>Vivamus quis tellus eget quam elementum aliquam cras nibh mi adipiscing a sodales in tincidunt ut enim praesent tempor molestie metus ut pretium odio.</p>
+    <h6 class="heading">VITAR ESTATE DEVELOPMENT INC.</h6>
     <ul class="faico clear">
       <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
       <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-      <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
       <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+
     </ul>
-    <nav>
-      <ul class="nospace">
-        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">Cookies</a></li>
-      </ul>
-    </nav>
+
     <!-- ################################################################################################ -->
   </footer>
 </div>
@@ -290,8 +167,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="index.php">Vitar Estate</a></p>
     <!-- ################################################################################################ -->
   </div>
 </div>
@@ -306,3 +182,5 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="assets/js/jquery.flexslider-min.js"></script>
 </body>
 </html>
+
+

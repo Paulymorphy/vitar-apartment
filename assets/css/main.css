@@ -41,7 +41,7 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -168,16 +168,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background-image: url("/apartment/assets/images/loginBG.jpg");
 }
 
 .wrap-login100 {
   width: 960px;
-  background: #fff;
+  background: rgb(255,255,255, 0.8);
   border-radius: 10px;
   overflow: hidden;
 
