@@ -37,16 +37,25 @@ Licence URI: http://www.os-templates.com/template-terms
             </li> -->
             <li><a href="commercial.php">Commercial</a></li>
             <li><a href="residential.php">Residential</a></li>
-            <li class="active"><a href="parking.php">Parking</a></li>
-            <li><a class="drop" href="#">Tenant</a>
-            <ul>
-            <li><a href="tenant_history.php">History</a></li>
-            <li><a href="tenant_bill.php">Bill</a></li>
-            <li><a href="tenant_settings.php">Account Settings</a></li>
-          </ul>
-            </li>
-            <li><a href="#">Register!</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="#">Parking</a></li>
+            <?php
+            session_start();
+            if(isset($_SESSION['user'])){
+                $user = $_SESSION['user'];
+                if($user['userType'] == 2){
+                  echo '<li><a class="drop" href="#">Tenant</a>';
+                  echo '<ul>';
+                  echo '<li><a href="t_history">History</a></li>';
+                  echo '<li><a class="t_bill" href="#">Bill</a></li>';
+                  echo '<li><a href="t_settings">Account Settings</a></li>';
+                  echo '<li><a href="controllers/logout.php">Logout</a></li>';
+                  echo '</ul></li>';
+                }
+            }else{
+                echo '<li><a href="signup.php">Register!</a></li>';
+                echo '<li><a href="login.php">Login</a></li>';
+            }
+        ?>
           </ul>
     </nav>
     <!-- ################################################################################################ -->

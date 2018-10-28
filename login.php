@@ -35,7 +35,7 @@
       <h1><a href="index.php">VITAR ESTATE</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
-		<ul class="clear">
+        <ul class="clear">
             <li class="active"><a href="index.php">Home</a></li>
             <!-- <li><a class="drop" href="#">Pages</a>
               <ul>
@@ -49,15 +49,14 @@
             <li><a href="commercial.php">Commercial</a></li>
             <li><a href="residential.php">Residential</a></li>
             <li><a href="parking.php">Parking</a></li>
-            <li><a class="drop" href="#">Tenant</a>
-						<ul>
-            <li><a href="tenant_history.php">History</a></li>
-            <li><a href="tenant_bill.php">Bill</a></li>
-            <li><a href="tenant_settings.php">Account Settings</a></li>
-          </ul>
-            </li>
-            <li><a href="#">Register!</a></li>
-            <li><a href="login.php">Login</a></li>
+            <?php
+            session_start();
+            if(isset($_SESSION['user'])){
+                header('location: index.php');
+            }else{
+                echo '<li><a href="signup.php">Register!</a></li>';
+            }
+        ?>
           </ul>
     </nav>
     <!-- ################################################################################################ -->

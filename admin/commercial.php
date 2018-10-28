@@ -1,4 +1,5 @@
 <?php
+    require_once('../model/maintenance.php');
     session_start();
     if(!isset($_SESSION['adminLoggedIn'])){
         header('location: ../login.php');
@@ -134,41 +135,18 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                  <td>01</td>
-                                  <td>Kathyrine Bayrante</td>
-                                  <td>09878356578</td>
-                                  <td>
-                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalEdit">Edit</button>
-                                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete">Delete</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                    <td>01</td>
-                                    <td>Kathyrine Bayrante</td>
-                                    <td>09878356578</td>
-                                    <td><button class ="btn btn-success">Edit</button>
-                                    <button class ="btn btn-danger">Delete</button>
-                                    </td>
-                              </tr>
-                              <tr>
-                                    <td>01</td>
-                                    <td>Kathyrine Bayrante</td>
-                                    <td>09878356578</td>
-                                    <td><button class ="btn btn-success">Edit</button>
-                                    <button class ="btn btn-danger">Delete</button>
-                                    </td>
-                             </tr>
-                              <tr>
-                                  <td>01</td>
-                                  <td>Kathyrine Bayrante</td>
-                                  <td>09878356578</td>
-                                  <td><button class ="btn btn-success">Edit</button>
-                                  <button class ="btn btn-danger">Delete</button>
-                                  </td>
-                              </tr>
-                                
-                    
+                              <?php
+                                    $counter = 1;
+                                    foreach(get_all_commercial_rental() as $elem){
+                                        echo "<tr>";
+                                        echo "<td>" . $counter . "</td>";
+                                        echo "<td>" . (strlen($elem['detailDesc']) > 15 ? substr($elem['detailDesc'], 0, 15) . "..." : $elem['detailDesc']) . "</td>";
+                                        echo "<td>" . $elem['montlyRate'] . "</td>";
+                                        echo '<td><button type="button" class="btn btn-success editRentable" data-id=' . $elem['id'] . '>Edit</button><button type="button" class="btn btn-danger removeRentable" data-id=' . $elem['id'] . '>Delete</button></td>';
+                                        echo "</tr>";
+                                        $counter++;
+                                    }
+                              ?>
                               </tbody>
                           </table>
                           </section>
@@ -186,26 +164,29 @@
     <div class="modal-content">
       <div class="modal-header" style = "background-color: #18D0FF">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create Commercial Space</h4>
+        <h4 class="modal-title">Create Residential Space</h4>
       </div>
-      <div class="modal-body">
-      <form>
-
-            <div class = "form-group">
-                <label> Description: </label>
-                <input type="textarea" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
-                <button></button>
-            </div>
+      <form id='addRentable'data-type='3'>
+        <div class="modal-body">
             <div class = "form-group">
                 <label> Rate: </label>
-                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="AddName" name ="rate" required>
             </div>
+            <div class = "form-group">
+                <label> Description: </label> <button type='button' class='btn btn-default addDescBtn'>+</button>
+                <input type="text" placeholder="Description" class="form-control" id="AddDesc" name ="txtDescription" required>
+                <div class='additionalDesc'></div>
+            </div>
+            <div class = "form-group">
+                <label> Images: </label>
+                <input type="file" class="form-control" id="rentalImage" name ="rentalImages[]" multiple required>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class = "btn btn-success" id="SubmitAdd">ADD</button>
+            <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+        </div>
       </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">ADD</button>
-        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
-      </div>
     </div>
 
   </div>
@@ -216,29 +197,33 @@
 <div id="myModalEdit" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!--Edit Modal content-->
+    <!--ADD Modal content-->
     <div class="modal-content">
       <div class="modal-header" style = "background-color: #18D0FF">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Edit Commercial Space</h4>
+        <h4 class="modal-title">Edit Residential Space</h4>
       </div>
-      <div class="modal-body">
-      <form>
-
-            <div class = "form-group">
-                <label> Description: </label>
-                <input type="textarea" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
-            </div>
+      <form id='editRentable'data-type='1'>
+        <div class="modal-body">
             <div class = "form-group">
                 <label> Rate: </label>
-                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="rate" required>
             </div>
+            <div class = "form-group">
+                <label> Description: </label> <button type='button' class='btn btn-default addDescBtn'>+</button>
+                <input type="text" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
+                <div class='additionalDesc'></div>
+            </div>
+            <div class = "form-group">
+                <label> Images: </label>
+                <input type="file" class="form-control" name ="rentalImages[]" multiple>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class = "btn btn-success" id="SubmitAdd">UPDATE</button>
+            <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+        </div>
       </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">SAVE</button>
-        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
-      </div>
     </div>
 
   </div>
@@ -306,7 +291,7 @@
     <script src="/apartment/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    
+    <script src="/apartment/assets/js/maintenance.js"></script>
 
   </body>
 </html>
