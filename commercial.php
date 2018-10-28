@@ -25,7 +25,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <nav id="mainav" class="fl_right">
         <ul class="clear">
-            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <!-- <li><a class="drop" href="#">Pages</a>
               <ul>
                 <li><a href="pages/gallery.html">Gallery</a></li>
@@ -35,15 +35,15 @@ Licence URI: http://www.os-templates.com/template-terms
                 <li><a href="pages/basic-grid.html">Basic Grid</a></li>
               </ul>
             </li> -->
-            <li><a href="#">Commercial</a></li>
+            <li class="active"><a href="commercial.php">Commercial</a></li>
             <li><a href="residential.php">Residential</a></li>
             <li><a href="parking.php">Parking</a></li>
             <li><a class="drop" href="#">Tenant</a>
-              <ul>
-                <li><a href="t_history">History</a></li>
-                <li><a class="t_bill" href="#">Bill</a></li>
-                <li><a href="t_settings">Account Settings</a></li>
-              </ul>
+            <ul>
+            <li><a href="tenant_history.php">History</a></li>
+            <li><a href="tenant_bill.php">Bill</a></li>
+            <li><a href="tenant_settings.php">Account Settings</a></li>
+          </ul>
             </li>
             <li><a href="#">Register!</a></li>
             <li><a href="login.php">Login</a></li>
@@ -55,7 +55,15 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/commercial.jpg');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h2 class="heading">COMMERCIAL SPACES</h2>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -106,28 +114,15 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
+<footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <h6 class="heading">Vitar Estate Development Inc.</h6>
-    <p>Vivamus quis tellus eget quam elementum aliquam cras nibh mi adipiscing a sodales in tincidunt ut enim praesent tempor molestie metus ut pretium odio.</p>
+    <h6 class="heading">VITAR ESTATE DEVELOPMENT INC.</h6>
     <ul class="faico clear">
       <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
       <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-      <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
       <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
     </ul>
-    <nav>
-      <ul class="nospace">
-        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">Cookies</a></li>
-      </ul>
-    </nav>
+
     <!-- ################################################################################################ -->
   </footer>
 </div>
@@ -137,8 +132,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">vitarestateapartment.com</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="index.php">Vitar Estate</a></p>
     <!-- ################################################################################################ -->
   </div>
 </div>
@@ -148,7 +142,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/scripts/jquery.backtotop.js"></script>
-<script src="assets/js/scripts/jquery.mobilemenu.js"></script>
+<script src="assets/js/jquery.backtotop.js"></script>
+<script src="assets/js/jquery.mobilemenu.js"></script>
 </body>
 </html>

@@ -32,12 +32,12 @@
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="../landing.html">VITAR ESTATE</a></h1>
+      <h1><a href="index.php">VITAR ESTATE</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
-        <ul class="clear">
-            <li class="active"><a href="landing.html">Home</a></li>
-            <li><a class="drop" href="#">Pages</a>
+		<ul class="clear">
+            <li class="active"><a href="index.php">Home</a></li>
+            <!-- <li><a class="drop" href="#">Pages</a>
               <ul>
                 <li><a href="pages/gallery.html">Gallery</a></li>
                 <li><a href="pages/full-width.html">Full Width</a></li>
@@ -45,16 +45,16 @@
                 <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
                 <li><a href="pages/basic-grid.html">Basic Grid</a></li>
               </ul>
-            </li>
-            <li><a href="commercial.html">Commercial</a></li>
-            <li><a href="residential.html">Residential</a></li>
-            <li><a href="parking.html">Parking</a></li>
+            </li> -->
+            <li><a href="commercial.php">Commercial</a></li>
+            <li><a href="residential.php">Residential</a></li>
+            <li><a href="parking.php">Parking</a></li>
             <li><a class="drop" href="#">Tenant</a>
-              <ul>
-                <li><a href="t_history">History</a></li>
-                <li><a class="t_bill" href="#">Bill</a></li>
-                <li><a href="t_settings">Account Settings</a></li>
-              </ul>
+						<ul>
+            <li><a href="tenant_history.php">History</a></li>
+            <li><a href="tenant_bill.php">Bill</a></li>
+            <li><a href="tenant_settings.php">Account Settings</a></li>
+          </ul>
             </li>
             <li><a href="#">Register!</a></li>
             <li><a href="login.php">Login</a></li>
@@ -68,7 +68,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="assets/images/img-01.png" alt="IMG">
+					<img src="assets/images/LOGO.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form" id="loginForm" method="POST">
@@ -103,7 +103,7 @@
 							Forgot
 						</span>
 						<a class="txt2" href="#">
-							Username / Password?
+							Password?
 						</a>
 					</div>
 
@@ -118,6 +118,37 @@
 		</div>
 	</div>
 	
+	<div class="wrapper row4">
+	<footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">VITAR ESTATE DEVELOPMENT INC.</h6>
+    <ul class="faico clear">
+      <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="index.php">Vitar Estate</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.backtotop.js"></script>
+<script src="assets/js/jquery.mobilemenu.js"></script>
 	
 
 	

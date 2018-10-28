@@ -33,7 +33,7 @@ function get_all_residential_rental(){
 
 #region create
 function add_rentable($data){
-    $sql1 = "CALL addRentable(:param1,:param2,:param3, param4)";
+    $sql1 = "CALL addRentable(:param1,:param2,:param3, :param4)";
     $dataIn1 = array($data['rent'], $data['type'], $data['description'], $data['path']);
     $stm1 = prepareStatement($sql1, $dataIn1);
     
