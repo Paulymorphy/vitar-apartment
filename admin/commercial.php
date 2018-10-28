@@ -136,13 +136,15 @@
                               </thead>
                               <tbody>
                               <?php
+                                    $counter = 1;
                                     foreach(get_all_commercial_rental() as $elem){
                                         echo "<tr>";
-                                        echo "<td>" . $elem['id'] . "</td>";
-                                        echo "<td>" . substr($elem['detailDesc'], 0, 15) . "...</td>";
+                                        echo "<td>" . $counter . "</td>";
+                                        echo "<td>" . (strlen($elem['detailDesc']) > 15 ? substr($elem['detailDesc'], 0, 15) . "..." : $elem['detailDesc']) . "</td>";
                                         echo "<td>" . $elem['montlyRate'] . "</td>";
-                                        echo '<td><button type="button" class="btn btn-success" data-id=' . $elem['id'] . ' data-toggle="modal" data-target="#myModalEdit">Edit</button><button type="button" class="btn btn-danger" data-id=' . $elem['id'] . ' data-toggle="modal" data-target="#myModalDelete">Delete</button></td>';
+                                        echo '<td><button type="button" class="btn btn-success editRentable" data-id=' . $elem['id'] . '>Edit</button><button type="button" class="btn btn-danger removeRentable" data-id=' . $elem['id'] . '>Delete</button></td>';
                                         echo "</tr>";
+                                        $counter++;
                                     }
                               ?>
                               </tbody>
@@ -195,29 +197,33 @@
 <div id="myModalEdit" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!--Edit Modal content-->
+    <!--ADD Modal content-->
     <div class="modal-content">
       <div class="modal-header" style = "background-color: #18D0FF">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Edit Commercial Space</h4>
+        <h4 class="modal-title">Edit Residential Space</h4>
       </div>
-      <div class="modal-body">
-      <form>
-
-            <div class = "form-group">
-                <label> Description: </label>
-                <input type="textarea" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
-            </div>
+      <form id='editRentable'data-type='1'>
+        <div class="modal-body">
             <div class = "form-group">
                 <label> Rate: </label>
-                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="rate" required>
             </div>
+            <div class = "form-group">
+                <label> Description: </label> <button type='button' class='btn btn-default addDescBtn'>+</button>
+                <input type="text" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
+                <div class='additionalDesc'></div>
+            </div>
+            <div class = "form-group">
+                <label> Images: </label>
+                <input type="file" class="form-control" name ="rentalImages[]" multiple>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class = "btn btn-success" id="SubmitAdd">UPDATE</button>
+            <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+        </div>
       </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">SAVE</button>
-        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
-      </div>
     </div>
 
   </div>
