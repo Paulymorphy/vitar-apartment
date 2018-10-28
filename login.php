@@ -67,7 +67,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="assets/images/img-01.png" alt="IMG">
+					<img src="assets/images/LOGO.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form" id="loginForm" method="POST">
@@ -102,7 +102,7 @@
 							Forgot
 						</span>
 						<a class="txt2" href="#">
-							Username / Password?
+							Password?
 						</a>
 					</div>
 
@@ -117,6 +117,37 @@
 		</div>
 	</div>
 	
+	<div class="wrapper row4">
+	<footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">VITAR ESTATE DEVELOPMENT INC.</h6>
+    <ul class="faico clear">
+      <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="index.php">Vitar Estate</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.backtotop.js"></script>
+<script src="assets/js/jquery.mobilemenu.js"></script>
 	
 
 	

@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Vitar Estate| Commercial</title>
+<title>Vitar Estate | Tenant</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -21,42 +21,25 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="index.php">VITAR ESTATE</a></h1>
+      <h1><a href="../index.html">Vitar Estate</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
-        <ul class="clear">
-            <li><a href="index.php">Home</a></li>
-            <!-- <li><a class="drop" href="#">Pages</a>
-              <ul>
-                <li><a href="pages/gallery.html">Gallery</a></li>
-                <li><a href="pages/full-width.html">Full Width</a></li>
-                <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-              </ul>
-            </li> -->
-            <li class="active"><a href="commercial.php">Commercial</a></li>
-            <li><a href="residential.php">Residential</a></li>
-            <li><a href="parking.php">Parking</a></li>
-            <?php
-            session_start();
-            if(isset($_SESSION['user'])){
-                $user = $_SESSION['user'];
-                if($user['userType'] == 2){
-                  echo '<li><a class="drop" href="#">Tenant</a>';
-                  echo '<ul>';
-                  echo '<li><a href="t_history">History</a></li>';
-                  echo '<li><a class="t_bill" href="#">Bill</a></li>';
-                  echo '<li><a href="t_settings">Account Settings</a></li>';
-                  echo '<li><a href="controllers/logout.php">Logout</a></li>';
-                  echo '</ul></li>';
-                }
-            }else{
-                echo '<li><a href="signup.php">Register!</a></li>';
-                echo '<li><a href="login.php">Login</a></li>';
-            }
-        ?>
+    <ul class="clear">
+        <li><a href="index.php">Home</a></li>
+
+        <li><a href="commercial.php">Commercial</a></li>
+        <li><a href="residential.php">Residential</a></li>
+        <li><a href="parking.php">Parking</a></li>
+        <li class="active"><a class="drop" href="#">Tenant</a>
+        <ul>
+            <li><a href="tenant_history.php">History</a></li>
+            <li><a href="tenant_bill.php">Bill</a></li>
+            <li><a href="tenant_settings.php">Account Settings</a></li>
           </ul>
+        </li>
+        <li><a href="#">Register!</a></li>
+        <li><a href="login.php">Login</a></li>
+      </ul>
     </nav>
     <!-- ################################################################################################ -->
   </header>
@@ -64,11 +47,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/commercial.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/tenantBG.jpg');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <h2 class="heading">COMMERCIAL SPACES</h2>
+      <h2 class="heading">TENANT HISTORY</h2>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -80,38 +63,71 @@ Licence URI: http://www.os-templates.com/template-terms
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
+    <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">Commercial Spaces</header>
-          <ul class="nospace clear">
-            <li class="one_quarter first">Unit 1<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 2<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 3<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 4<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>          
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-
-          </ul>
-
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <nav class="pagination">
+      <h6>TENANT</h6>
+      <nav class="sdb_holder">
         <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a class="current"><strong>1</strong></a></li>
-          <li><a href="#">Next &raquo;</a></li>
-        </ul>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Bill</a></li>
+          <li><a href="#">Settings</a></li>
+        <ul>
       </nav>
+      <div class="sdb_holder">
+        <h6>TENANT PROFILE</h6>
+        <address>
+        Full Name:<br>
+        Birthday:<br>
+        Occupation:<br>
+        Gender:<br>
+        <br>
+        Contact No.:<br>
+        Email: 
+        </address>
+      </div>
+
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter"> 
+      <!-- ################################################################################################ -->
+      <h1>HISTORY</h1>
+      <h1></h1>
+      <div class="scrollable">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Subject</th>
+              <th>Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Value 2</td>
+              <td>Value 3</td>
+              <td>Value 4</td>
+            </tr>
+            <tr>
+              <td>Value 5</td>
+              <td>Value 6</td>
+              <td>Value 7</td>
+            </tr>
+            <tr>
+              <td>Value 9</td>
+              <td>Value 10</td>
+              <td>Value 11</td>
+            </tr>
+            <tr>
+              <td>Value 13</td>
+              <td>Value 15</td>
+              <td>Value 16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <!-- ################################################################################################ -->
     </div>
     <!-- ################################################################################################ -->
