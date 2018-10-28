@@ -73,8 +73,8 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="/apartment/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              <p class="centered"><a href="profile.html"><img src="/apartment/assets/images/LOGO.png" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Admin</h5>
               	  	
                   <li class="mt">
                       <a href="index.php">
@@ -245,7 +245,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2014 - Alvarez.is
+          2018 - Vitar Estate Development Inc.
               <a href="responsive_table.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>

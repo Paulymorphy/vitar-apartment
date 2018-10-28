@@ -21,7 +21,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="../index.html">Vitar Estate</a></h1>
+      <h1><a href="index.php">Vitar Estate</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
@@ -65,6 +65,15 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/visit.jpg');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h2 class="heading">SCHEDULE YOUR VISIT!</h2>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
 
 <div class="wrapper row3">
   <main class="hoc container clear"> 
