@@ -39,6 +39,16 @@ function get_rental_by_id($id){
         return false;
     }
 }
+
+function get_tenant_by_accID($id){
+    $sql = "SELECT * FROM tenant WHERE account = :param1";
+    $stm = prepareStatement($sql, array($id));
+    if($stm->execute()){
+        return $stm->fetch();
+    }else{
+        return false;
+    }
+}
 #endregion 
 
 #region create

@@ -186,7 +186,9 @@ Licence URI: http://www.os-templates.com/template-terms
     <?php
       if(isset($_GET['reg'])){
         echo "alert('Succefully Registered')";
-      }  
+      }else if(isset($_GET['detail'])){
+        echo "alert('" . $_GET['detail'] . "')";
+      }
     ?>
   });
 </script>

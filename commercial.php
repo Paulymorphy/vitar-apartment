@@ -1,3 +1,6 @@
+<?php
+  require_once('core/db.php');
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Lalapeden
@@ -87,19 +90,25 @@ Licence URI: http://www.os-templates.com/template-terms
         <figure>
           <header class="heading">Commercial Spaces</header>
           <ul class="nospace clear">
-            <li class="one_quarter first">Unit 1<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 2<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 3<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 4<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>          
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-
+          <?php
+              $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
+              $limit = 4;
+              $sql = "SELECT * FROM rentable WHERE type = 'commercial' LIMIT $offset, $limit";
+              $stm = prepareStatement($sql,[]);
+              if($stm->execute()){
+                $data = $stm->fetchAll();
+                $dataCount = $stm->rowCount();
+                for($x=$offset; $x<$offset + $limit; $x++){
+                  if($x >= $dataCount){}else{
+                    $path = explode(';',$data[$x]['path']);
+                    $file = explode('/',$path[0]);
+                    echo '<li class="one_quarter">Unit ' . ($x+1);
+                    echo '<a href="#"><img src="assets/uploads/' . end($file) . '" alt="unit image"></a>';
+                    echo '<figcaption>>' . implode('<br>>',explode(';',$data[$x]['detailDesc'])) . '</figcaption></li>';
+                  }
+                }
+              }
+          ?>
           </ul>
 
         </figure>
@@ -108,9 +117,9 @@ Licence URI: http://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
       <nav class="pagination">
         <ul>
-          <li><a href="#">&laquo; Previous</a></li>
+          <li><a href="commercial.php?offset=<?php echo $offset > $limit ? $offset-$limit : 0 ?>">&laquo; Previous</a></li>
           <li><a class="current"><strong>1</strong></a></li>
-          <li><a href="#">Next &raquo;</a></li>
+          <li><a href="commercial.php?offset=<?php echo $offset = $limit ?>">Next &raquo;</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->

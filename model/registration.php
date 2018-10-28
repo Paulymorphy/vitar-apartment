@@ -4,10 +4,10 @@ require_once('../core/db.php');
 function registerTenant($data){
     //VALIDATIONS
     $unitID = verifyKeyCode($data['keycode']);
-    if($unitID == false) return "Invalid Keycode";
+    if($unitID == false) return false;
     $accDetail = array('username'=>$data['email'],'password'=>$data['pass']);
     $accID = addAccount($accDetail);
-    if($accID == false) return "Information Error";
+    if($accID == false) return false;
 
     $dataIn = array(
         'fullname'=>($data['firstname'] . "_" . $data['middlename'] . "_" . $data['lastname']),

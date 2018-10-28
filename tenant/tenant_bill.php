@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Lalapeden
@@ -68,15 +71,21 @@ Licence URI: http://www.os-templates.com/template-terms
         <ul>
       </nav>
       <div class="sdb_holder">
+        <h6>UNIT INFO</h6>
+        <address>
+          
+        </address>
+      </div>
+      <div class="sdb_holder">
         <h6>TENANT PROFILE</h6>
         <address>
-        Full Name:<br>
-        Birthday:<br>
-        Occupation:<br>
-        Gender:<br>
+        Full Name: <?php echo implode(' ',explode('_',$_SESSION['userInfo']['fullname']))?><br>
+        Birthday: <?php $date = new DateTime($_SESSION['userInfo']['birthdate']); echo $date->format('m/d/Y'); ?><br>
+        Occupation: <?php echo $_SESSION['userInfo']['occupation'] ?> <br>
+        <!-- Gender:<br> -->
         <br>
-        Contact No.:<br>
-        Email: 
+        Contact No.: <?php echo $_SESSION['userInfo']['contact'] ?><br>
+        Email: <?php echo $_SESSION['userInfo']['email'] ?>
         </address>
       </div>
 

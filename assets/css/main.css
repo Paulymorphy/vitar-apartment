@@ -168,7 +168,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-image: url("/apartment/assets/images/loginBG.jpg");
+  background-image: url("../images/loginBG.jpg");
 }
 
 .wrap-login100 {
