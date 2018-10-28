@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Vitar | Login </title>
+	<title>Vitar | Sign up </title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -22,47 +20,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <!--===============================================================================================-->
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
-
 </head>
 <body>
-<div class="wrapper row1">
-  <header id="header" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div id="logo" class="fl_left">
-      <h1><a href="index.php">VITAR ESTATE</a></h1>
-    </div>
-    <nav id="mainav" class="fl_right">
-        <ul class="clear">
-            <li class="active"><a href="index.php">Home</a></li>
-            <!-- <li><a class="drop" href="#">Pages</a>
-              <ul>
-                <li><a href="pages/gallery.html">Gallery</a></li>
-                <li><a href="pages/full-width.html">Full Width</a></li>
-                <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-              </ul>
-            </li> -->
-            <li><a href="commercial.php">Commercial</a></li>
-            <li><a href="residential.php">Residential</a></li>
-            <li><a href="parking.php">Parking</a></li>
-            <?php
-            session_start();
-            if(isset($_SESSION['user'])){
-                header('location: index.php');
-            }else{
-                echo '<li><a href="signup.php">Register!</a></li>';
-            }
-        ?>
-          </ul>
-    </nav>
-    <!-- ################################################################################################ -->
-  </header>
-</div>
-
+	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -70,9 +30,9 @@
 					<img src="assets/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" id="loginForm" method="POST">
+				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Login
+						Register
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -83,8 +43,64 @@
 						</span>
 					</div>
 
+					<div class="wrap-input100 validate-input" data-validate = "First Name is required">
+						<input class="input100" type="text" name="firstname" placeholder="First Name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "">
+						<input class="input100" type="text" name="middlename" placeholder="Middle Name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Last Name is required">
+						<input class="input100" type="text" name="lastname" placeholder="Last Name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Birthday is required">
+						<input class="input100" type="date" name="bday" placeholder="Birthday">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-birthday-cake" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Contact Number is required">
+						<input class="input100" type="text" name="Contact Number" placeholder="Contact Number">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "">
+						<input class="input100" type="text" name="Occupation" placeholder="Occupation">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-male" aria-hidden="true"></i>
+						</span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password should match">
+						<input class="input100" type="password" name="pass2" placeholder="Retype Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -93,7 +109,7 @@
 					
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Login
+							Sign up
 						</button>
 					</div>
 
@@ -107,9 +123,9 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="signup.html">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+						<a class="txt2" href="login.php">
+							Back to Login
 						</a>
 					</div>
 				</form>
@@ -132,10 +148,10 @@
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
-		});
+		})
 	</script>
 <!--===============================================================================================-->
-	<script src="assets/js/main.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>

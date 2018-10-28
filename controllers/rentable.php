@@ -3,22 +3,23 @@ require_once('../model/maintenance.php');
 require_once('../core/fileUpload.php');
 
 if(isset($_POST['addRentable'])){
-
-    $filepath = processImageUpload($_FILES);
-
-    if($filepath == false){
+    if(!isset($_FILES['rentalImages'])){
         echo json_encode((object)array('success'=>false, 'detail'=>'No image uploaded'));
         return; 
-    }else if(is_array($filepath)){
-        echo json_encode((object)array('success'=>false, 'detail'=>$filepath));
-        return;
     }
 
-    $data = (object)array(
-        'rent'=>$_POST['rent'],
+    $files = reArrayFiles($_FILES['rentalImages']);
+    $filepath = array();
+    foreach($files as $file){
+        $newFilePath = processImageUpload($file);
+        $filepath[] = $newFilePath;
+    }
+
+    $data = array(
+        'rent'=>$_POST['rate'],
         'type'=>$_POST['type'],
-        'description'=>$_POST['desc'],
-        'path'=>$filepath
+        'description'=>implode(';',$_POST['desc']),
+        'path'=>implode(';',$filepath)
     );
 
     $res = add_rentable($data);

@@ -1,4 +1,5 @@
 <?php
+    require_once('../model/maintenance.php');
     session_start();
     if(!isset($_SESSION['adminLoggedIn'])){
         header('location: ../login.php');
@@ -134,41 +135,16 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                  <td>01</td>
-                                  <td>Kathyrine Bayrante</td>
-                                  <td>09878356578</td>
-                                  <td>
-                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalEdit">Edit</button>
-                                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModalDelete">Delete</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                    <td>01</td>
-                                    <td>Kathyrine Bayrante</td>
-                                    <td>09878356578</td>
-                                    <td><button class ="btn btn-success">Edit</button>
-                                    <button class ="btn btn-danger">Delete</button>
-                                    </td>
-                              </tr>
-                              <tr>
-                                    <td>01</td>
-                                    <td>Kathyrine Bayrante</td>
-                                    <td>09878356578</td>
-                                    <td><button class ="btn btn-success">Edit</button>
-                                    <button class ="btn btn-danger">Delete</button>
-                                    </td>
-                             </tr>
-                              <tr>
-                                  <td>01</td>
-                                  <td>Kathyrine Bayrante</td>
-                                  <td>09878356578</td>
-                                  <td><button class ="btn btn-success">Edit</button>
-                                  <button class ="btn btn-danger">Delete</button>
-                                  </td>
-                              </tr>
-                                
-                    
+                              <?php
+                                    foreach(get_all_commercial_rental() as $elem){
+                                        echo "<tr>";
+                                        echo "<td>" . $elem['id'] . "</td>";
+                                        echo "<td>" . substr($elem['detailDesc'], 0, 15) . "...</td>";
+                                        echo "<td>" . $elem['montlyRate'] . "</td>";
+                                        echo '<td><button type="button" class="btn btn-success" data-id=' . $elem['id'] . ' data-toggle="modal" data-target="#myModalEdit">Edit</button><button type="button" class="btn btn-danger" data-id=' . $elem['id'] . ' data-toggle="modal" data-target="#myModalDelete">Delete</button></td>';
+                                        echo "</tr>";
+                                    }
+                              ?>
                               </tbody>
                           </table>
                           </section>
@@ -186,26 +162,29 @@
     <div class="modal-content">
       <div class="modal-header" style = "background-color: #18D0FF">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create Commercial Space</h4>
+        <h4 class="modal-title">Create Residential Space</h4>
       </div>
-      <div class="modal-body">
-      <form>
-
-            <div class = "form-group">
-                <label> Description: </label>
-                <input type="textarea" placeholder="Description" class="form-control" id="EditDesc" name ="txtDescription" required>
-                <button></button>
-            </div>
+      <form id='addRentable'data-type='3'>
+        <div class="modal-body">
             <div class = "form-group">
                 <label> Rate: </label>
-                <input type="Number" placeholder="Price Rate" class="form-control" id="EditName" name ="txtRate" required>
+                <input type="Number" placeholder="Price Rate" class="form-control" id="AddName" name ="rate" required>
             </div>
+            <div class = "form-group">
+                <label> Description: </label> <button type='button' class='btn btn-default addDescBtn'>+</button>
+                <input type="text" placeholder="Description" class="form-control" id="AddDesc" name ="txtDescription" required>
+                <div class='additionalDesc'></div>
+            </div>
+            <div class = "form-group">
+                <label> Images: </label>
+                <input type="file" class="form-control" id="rentalImage" name ="rentalImages[]" multiple required>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class = "btn btn-success" id="SubmitAdd">ADD</button>
+            <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
+        </div>
       </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class = "btn btn-success" data-dismiss = "modal" id="SubmitEdit">ADD</button>
-        <button type ="button" class = "btn btn-danger" data-dismiss = "modal"> CANCEL </button>
-      </div>
     </div>
 
   </div>
@@ -306,7 +285,7 @@
     <script src="/apartment/assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    
+    <script src="/apartment/assets/js/maintenance.js"></script>
 
   </body>
 </html>

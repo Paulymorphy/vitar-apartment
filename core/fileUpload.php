@@ -1,16 +1,18 @@
 <?php
 
-function processImageUpload($files,$fieldName){
-    $target_dir = "assets/uploads/";
+function processImageUpload($files){
+    $target_dir = "../assets/uploads/";
     $fileExtensions = ['jpeg','jpg','png'];
 
-    $fileName = $_FILES[$fieldName]['name'];
-    $fileSize = $_FILES[$fieldName]['size'];
-    $fileTmpName  = $_FILES[$fieldName]['tmp_name'];
-    $fileType = $_FILES[$fieldName]['type'];
-    $fileExtension = strtolower(end(explode('.',$fileName)));
+    $fileName = $files['name'];
+    $fileSize = $files['size'];
+    $fileTmpName  = $files['tmp_name'];
+    $fileType = $files['type'];
 
-    $uploadPath = $target_dir . uniqid() . $fileExtensions;
+    $tempExt = explode('.',$fileName);
+    $fileExtension = strtolower(end($tempExt));
+
+    $uploadPath = $target_dir . uniqid() . "." . $fileExtension;
     $errors = []; 
 
     if (! in_array($fileExtension,$fileExtensions)) {
@@ -34,4 +36,18 @@ function processImageUpload($files,$fieldName){
             return $errors;
         }
     }
+}
+
+function reArrayFiles(&$file_post) {
+    $file_ary = array();
+    $file_count = count($file_post['name']);
+    $file_keys = array_keys($file_post);
+
+    for ($i=0; $i<$file_count; $i++) {
+        foreach ($file_keys as $key) {
+            $file_ary[$i][$key] = $file_post[$key][$i];
+        }
+    }
+
+    return $file_ary;
 }
