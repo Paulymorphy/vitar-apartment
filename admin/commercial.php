@@ -27,7 +27,7 @@
     <link href="/apartment/assets/css/style-responsive.css" rel="stylesheet">
 
     <link href="/apartment/assets/css/table-responsive.css" rel="stylesheet">
-
+    <link href="/apartment/assets/vendor/datatables/datatables.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -125,7 +125,7 @@
                       <h4><i class="fa fa-angle-right"></i> Commercial Space</h4>
                       <button type="button" style = "float:right" class="btn btn-primary" data-toggle="modal" data-target="#myModalAdd">CREATE</button>
                           <section id="unseen">
-                            <table class="table table-bordered table-striped table-condensed">
+                            <table class="table table-bordered table-striped table-condensed rentableTable">
                               <thead>
                               <tr>
                                   <th>ID</th>
@@ -285,7 +285,7 @@
     <script class="include" type="text/javascript" src="/apartment/assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="/apartment/assets/js/jquery.scrollTo.min.js"></script>
     <script src="/apartment/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
+    <script src="/apartment/assets/vendor/datatables/datatables.min.js"></script>
 
     <!--common script for all pages-->
     <script src="/apartment/assets/js/common-scripts.js"></script>

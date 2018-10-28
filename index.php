@@ -181,6 +181,15 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="assets/js/jquery.backtotop.js"></script>
 <script src="assets/js/jquery.mobilemenu.js"></script>
 <script src="assets/js/jquery.flexslider-min.js"></script>
+<script>
+  $(function(){
+    <?php
+      if(isset($_GET['reg'])){
+        echo "alert('Succefully Registered')";
+      }  
+    ?>
+  });
+</script>
 </body>
 </html>
 

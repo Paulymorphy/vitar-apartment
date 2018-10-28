@@ -112,6 +112,8 @@ $(function () {
         });
     });
 
+    $('.rentableTable').DataTable();
+
     function addDescField(value){
         var descCount = $('.descAdd').length;
         if (descCount < 6) {

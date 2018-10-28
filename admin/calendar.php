@@ -119,25 +119,22 @@
           	<h3><i class="fa fa-angle-right"></i> Calendar</h3>
               <!-- page start-->
               <div class="row mt">
-                  <aside class="col-lg-3 mt">
-                      <h4><i class="fa fa-angle-right"></i> Draggable Events</h4>
-                      <div id="external-events">
-                          <div class="external-event label label-theme">My Event 1</div>
-                          <div class="external-event label label-success">My Event 2</div>
-                          <div class="external-event label label-info">My Event 3</div>
-                          <div class="external-event label label-warning">My Event 4</div>
-                          <div class="external-event label label-danger">My Event 5</div>
-                          <div class="external-event label label-default">My Event 6</div>
-                          <div class="external-event label label-theme">My Event 7</div>
-                          <div class="external-event label label-info">My Event 8</div>
-                          <div class="external-event label label-success">My Event 9</div>
-                          <p class="drop-after">
-                              <input type="checkbox" id="drop-remove">
-                              Remove After Drop
-                          </p>
+                  <aside class="col-lg-4 mt">
+                      <h4><i class="fa fa-angle-right"></i> Pending Tenant</h4>
+                      <div>
+                            <table class="table table-bordered table-striped table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Renting</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                       </div>
                   </aside>
-                  <aside class="col-lg-9 mt">
+                  <aside class="col-lg-8 mt">
                       <section class="panel">
                           <div class="panel-body">
                               <div id="calendar" class="has-toolbar"></div>
@@ -175,14 +172,28 @@
     <!--common script for all pages-->
     <script src="/apartment/assets/js/common-scripts.js"></script>
 
-    <!--script for this page-->
-	<script src="/apartment/assets/js/calendar-conf-events.js"></script>    
+    <!--script for this page-->   
   
   <script>
       //custom select box
 
       $(function(){
-          $("select.styled").customSelect();
+        //   $("select.styled").customSelect();
+          $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,basicWeek,basicDay'
+                },
+                editable: false,
+                droppable: false, // this allows things to be dropped onto the calendar !!!
+                eventSources:[
+                    {
+                        url: "../controllers/schedule.php",
+                        type: "GET",
+                    }
+                ]
+            });
       });
 
   </script>
