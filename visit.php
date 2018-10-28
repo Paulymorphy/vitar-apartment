@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Vitar Estate Development Inc.</title>
+<title>Vitar Estate | Schedule Visit</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -21,7 +21,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="#">VITAR ESTATE</a></h1>
+      <h1><a href="../index.html">Vitar Estate</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
@@ -65,86 +65,90 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/landingBG.jpg');">
-  <div id="pageintro" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <article>
-      <h2 class="heading">Vitar Estate development Inc.</h2>
-    </article>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="sectiontitle">
-      <h1 class="heading">RENTAL SPACES</h1>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class=""group btmspace-50 demo""> 
+        <h2>Schedule your visit!</h2>
+        <form action="#" method="post">
+          <div class="one_half first">
+            <label for="name">First Name <span>*</span></label>
+            <input type="text" name="f_name" id="name" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="name"> Middle Name <span>*</span></label>
+            <input type="text" name="m_name" id="name" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="name">Last Name <span>*</span></label>
+            <input type="text" name="l_name" id="name" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="email">E-mail <span>*</span></label>
+            <input type="email" name="email" id="email" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="bday">Birthday <span>*</span></label>
+            <input type="date" name="bday" id="bday" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="gender">Gender <span>*</span></label>
+            <input type="name" name="gender" id="gender" value="" size="50" required>
+          </div>
+          <div class="one_half first">
+            <label for="Occupation">Occupation <span>*</span></label>
+            <input type="name" name="occupation" id="occupation" value="" size="50" required><br>
+          </div>
+          <div class="one_half first">
+            <label for="unit">Unit you want to visit <span>*</span></label>
+            <input type="select" name="unit" id="unit" value="Commercial" size="50" required>
+            <select>
+                <option value="Unit 1">Unit 1</option>
+                <option value="Unit 2">Unit 2</option>
+            </select><br>
+            </div>
+            <div class="one_half first">
+            <input type="select" name="unit" id="unit" value="Residential" size="50" required>
+            <select>
+                <option value="Unit 1">Unit 1</option>
+                <option value="Unit 2">Unit 2</option>
+            </select><br>
+            </div>
+            <div class="one_half first">
+            <input type="select" name="unit" id="unit" value="Parking" size="50" required>
+            <select>
+                <option value="Lot 1">Lot 1</option>
+                <option value="Lot 2">Lot 2</option>
+            </select><br>
+          </div>
+          <div class="one_half first">
+            <label for="date">Date and Time <span>*</span></label>
+            <input type="select" name="date_sched" id="date_sched" value="" size="50" required>
+          <select>
+                <option value="Date1">Aug 12, 2018, 3pm</option>
+                <option value="Date2">Aug 29, 2018, 1pm</option>
+            </select>
+            </div>
+          <div class="block clear">
+
+          </div><br>
+          <div>
+            <input type="submit" name="submit" value="Submit">
+            &nbsp;
+
+          </div>
+        </form>
+      <!-- ################################################################################################ -->
     </div>
-    <ul class="nospace group services">
-      <li class="one_third first">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-joomla"></i> <a href="commercial.php">Commercial</a></h6>
-          <p>We offer commercial spaces for your business. The price ranges from P12,000 to P 35,000 per month.</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-key"></i> <a href="residential.php">Residential</a></h6>
-          <p>We offer residential spaces for you and your family. The price ranges from P7,000 to P 15,000 per month.</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="infobox">
-          <h6 class="heading"><i class="fa fa-pied-piper-alt"></i> <a href="parking.php">Parking</a></h6>
-          <p>We offer parking spaces for your cars. The price ranges from P2,000 to P 2,500 per month. </p>
-        </article>
-      </li>
-    </ul>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
   </main>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper bgded overlay">
-  <div class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="flexslider testimonials">
-      <ul class="slides">
-        <li>
-          <article><img src='assets/images/commercial_1.jpg' alt="">
-            <h6 class="heading">COMMERCIAL SPACES</h6>
-          </article>
-        </li>
-        <li>
-          <article><img src='assets/images/residential.jpg' alt="">
-            <h6 class="heading">RESIDENTIAL SPACES</h6>
-          </article>
-        </li>
-        <li>
-          <article><img src='assets/images/parking.jpg' alt="">
-            <h6 class="heading">PARKING SPACES</h6>
-          </article>
-        </li>
-      </ul>
-    </div>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -156,7 +160,6 @@ Licence URI: http://www.os-templates.com/template-terms
       <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
       <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
       <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-
     </ul>
 
     <!-- ################################################################################################ -->
@@ -180,8 +183,5 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.backtotop.js"></script>
 <script src="assets/js/jquery.mobilemenu.js"></script>
-<script src="assets/js/jquery.flexslider-min.js"></script>
 </body>
 </html>
-
-

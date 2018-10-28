@@ -38,6 +38,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="commercial.php">Commercial</a></li>
             <li class="active"><a href="residential.php">Residential</a></li>
             <li><a href="parking.php">Parking</a></li>
+            <li><a href="visit.php">Schedule Unit Visit!</a></li>
             <?php
             session_start();
             if(isset($_SESSION['user'])){

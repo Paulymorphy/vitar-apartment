@@ -90,7 +90,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <div class="content three_quarter"> 
-        <h2>Write A Comment</h2>
+        <h2>Account Settings</h2>
         <form action="#" method="post">
           <div class="one_third first">
             <label for="name">First Name <span>*</span></label>
@@ -105,7 +105,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <input type="text" name="l_name" id="name" value="" size="22" required>
           </div>
           <div class="one_third first">
-            <label for="email">Mail <span>*</span></label>
+            <label for="email">E-mail <span>*</span></label>
             <input type="email" name="email" id="email" value="" size="22" required>
           </div>
           <div class="one_third first">
@@ -119,6 +119,10 @@ Licence URI: http://www.os-templates.com/template-terms
           <div class="one_third first">
             <label for="Occupation">Occupation <span>*</span></label>
             <input type="name" name="occupation" id="occupation" value="" size="22" required>
+          </div>
+          <div class="one_third first">
+            <label for="unit">Unit Renting <span>*</span></label>
+            <input type="name" name="unit" id="unit" value="" size="22" required>
           </div>
 
           <div class="block clear">
