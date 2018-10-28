@@ -11,11 +11,9 @@ Licence URI: http://www.os-templates.com/template-terms
 <title>Vitar Estate | Tenant</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row1">
   <header id="header" class="hoc clear"> 
@@ -25,40 +23,36 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <nav id="mainav" class="fl_right">
     <ul class="clear">
-        <li><a href="index.php">Home</a></li>
+    <li><a href="../index.php">Home</a></li>
 
-        <li><a href="commercial.php">Commercial</a></li>
-        <li><a href="residential.php">Residential</a></li>
-        <li><a href="parking.php">Parking</a></li>
-        <li class="active"><a class="drop" href="#">Tenant</a>
-        <ul>
-            <li><a href="tenant_history.php">History</a></li>
-            <li><a href="tenant_bill.php">Bill</a></li>
-            <li><a href="tenant_settings.php">Account Settings</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Register!</a></li>
-        <li><a href="login.php">Login</a></li>
+      <li><a href="../commercial.php">Commercial</a></li>
+      <li><a href="../residential.php">Residential</a></li>
+      <li><a href="../parking.php">Parking</a></li>
+      <li class="active"><a class="drop" href="#">Tenant</a>
+      <ul>
+          <li><a href="tenant_history.php">History</a></li>
+          <li><a href="tenant_bill.php">Bill</a></li>
+          <li><a href="tenant_settings.php">Account Settings</a></li>
+          <li><a href="../controllers/logout.php">Logout</a></li>
+        </ul>
+      </li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
   </header>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/tenantBG.jpg');">
+
+<div class="wrapper bgded overlay" style="background-image:url('../assets/images/tenantBG.jpg');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <h2 class="heading">TENANT HISTORY</h2>
+      <h2 class="heading">TENANT BILL</h2>
     </article>
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <!-- main body -->
@@ -92,7 +86,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="content three_quarter"> 
       <!-- ################################################################################################ -->
-      <h1>HISTORY</h1>
+      <h1>BILL</h1>
       <h1></h1>
       <div class="scrollable">
         <table>
@@ -166,8 +160,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.backtotop.js"></script>
-<script src="assets/js/jquery.mobilemenu.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.backtotop.js"></script>
+<script src="../assets/js/jquery.mobilemenu.js"></script>
 </body>
 </html>

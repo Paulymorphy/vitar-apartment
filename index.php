@@ -45,9 +45,9 @@ Licence URI: http://www.os-templates.com/template-terms
                 if($user['userType'] == 2){
                   echo '<li><a class="drop" href="#">Tenant</a>';
                   echo '<ul>';
-                  echo '<li><a href="t_history">History</a></li>';
-                  echo '<li><a class="t_bill" href="#">Bill</a></li>';
-                  echo '<li><a href="t_settings">Account Settings</a></li>';
+                  echo '<li><a href="tenant/tenant_history.php">History</a></li>';
+                  echo '<li><a href="tenant/tenant_bill.php">Bill</a></li>';
+                  echo '<li><a href="tenant/tenant_settings.php">Account Settings</a></li>';
                   echo '<li><a href="controllers/logout.php">Logout</a></li>';
                   echo '</ul></li>';
                 }
