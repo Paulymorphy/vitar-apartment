@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Vitar | Login </title>
+	<title>Vitar Estate | Login </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -49,6 +49,8 @@
             <li><a href="commercial.php">Commercial</a></li>
             <li><a href="residential.php">Residential</a></li>
             <li><a href="parking.php">Parking</a></li>
+						<li><a href="visit.php">Schedule Unit Visit!</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
 						
             <?php
             session_start();
@@ -108,7 +110,7 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="signup.html">
+						<a class="txt2" href="signup.php">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

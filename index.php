@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Vitar Estate Development Inc.</title>
+<title>Vitar Estate | HOME</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -39,6 +39,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <li><a href="residential.php">Residential</a></li>
         <li><a href="parking.php">Parking</a></li>
         <li><a href="visit.php">Schedule Unit Visit!</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
         <?php
             session_start();
             if(isset($_SESSION['user'])){
@@ -152,12 +153,12 @@ Licence URI: http://www.os-templates.com/template-terms
 <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <h6 class="heading">VITAR ESTATE DEVELOPMENT INC.</h6>
-    <ul class="faico clear">
-      <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-
-    </ul>
+    <p>Share our website in social media!!!</p>
+      <ul>
+      <li><div class="fb-share-button" data-href="https://vitar-estate-inc.herokuapp.com/" data-layout="button_count"></div></li>
+      <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+      <li><div class="g-plus" data-action="share" ></div></li>
+      </ul>
 
     <!-- ################################################################################################ -->
   </footer>
@@ -191,6 +192,14 @@ Licence URI: http://www.os-templates.com/template-terms
       }
     ?>
   });
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>

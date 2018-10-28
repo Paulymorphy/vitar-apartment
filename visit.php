@@ -25,7 +25,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <!-- <li><a class="drop" href="#">Pages</a>
           <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
@@ -38,7 +38,8 @@ Licence URI: http://www.os-templates.com/template-terms
         <li><a href="commercial.php">Commercial</a></li>
         <li><a href="residential.php">Residential</a></li>
         <li><a href="parking.php">Parking</a></li>
-        <li><a href="visit.php">Schedule Unit Visit!</a></li>
+        <li class="active"><a href="visit.php">Schedule Unit Visit!</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
         <?php
             session_start();
             if(isset($_SESSION['user'])){

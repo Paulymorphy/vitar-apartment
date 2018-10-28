@@ -1,7 +1,3 @@
-<?php
-  require_once('core/db.php');
-  // require_once('model/maintenance.php');
-?>
 <!DOCTYPE html>
 <!--
 Template Name: Lalapeden
@@ -12,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Vitar Estate | Residential</title>
+<title>Vitar Estate | About Us</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -30,7 +26,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <nav id="mainav" class="fl_right">
         <ul class="clear">
             <li><a href="index.php">Home</a></li>
-            <!-- li><a class="drop" href="#">Pages</a>
+            <!-- <li><a class="drop" href="#">Pages</a>
               <ul>
                 <li><a href="pages/gallery.html">Gallery</a></li>
                 <li><a href="pages/full-width.html">Full Width</a></li>
@@ -40,10 +36,10 @@ Licence URI: http://www.os-templates.com/template-terms
               </ul>
             </li> -->
             <li><a href="commercial.php">Commercial</a></li>
-            <li class="active"><a href="residential.php">Residential</a></li>
+            <li><a href="residential.php">Residential</a></li>
             <li><a href="parking.php">Parking</a></li>
             <li><a href="visit.php">Schedule Unit Visit!</a></li>
-            <li><a href="aboutus.php">About Us</a></li>
+            <li class="active"><a href="aboutus.php">About Us</a></li>
             <?php
             session_start();
             if(isset($_SESSION['user'])){
@@ -70,11 +66,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('assets/images/residential.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('assets/images/about.jpeg');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <h2 class="heading">RESIDENTIAL SPACES</h2>
+      <h2 class="heading">ABOUT US</h2>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -82,60 +78,33 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
+
 <div class="wrapper row3">
   <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="content"> 
+  <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">Residential Spaces</header>
-          <ul class="nospace clear">
-          <?php
-              $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
-              $limit = 4;
-              $sql = "SELECT * FROM rentable WHERE type = 'residential' LIMIT $offset, $limit";
-              $stm = prepareStatement($sql,[]);
-              if($stm->execute()){
-                $data = $stm->fetchAll();
-                $dataCount = $stm->rowCount();
-                for($x=$offset; $x<$offset + $limit; $x++){
-                  if($x >= $dataCount){}else{
-                    $path = explode(';',$data[$x]['path']);
-                    $file = explode('/',$path[0]);
-                    echo '<li class="one_quarter">Unit ' . ($x+1);
-                    echo '<a href="#"><img src="assets/uploads/' . end($file) . '" alt="unit image"></a>';
-                    echo '<figcaption>>' . implode('<br>>',explode(';',$data[$x]['detailDesc'])) . '</figcaption></li>';
-                  }
-                }
-              }
-          ?>
-            <!-- <li class="one_quarter first">Unit 1<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 2<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 3<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li>
-            <li class="one_quarter">Unit 4<a href="#"><img src="assets/images/demo/gallery/01.png" alt=""></a>
-                <figcaption>Gallery Description Goes Here</figcaption>
-            </li> -->
-          </ul>
+      <img class="imgl borderedbox inspace-5" src="assets/images/LOGO.png" alt="">
+</div>
 
-        </figure>
-      </div>
+<div class="content three_quarter"> 
+      <!-- ################################################################################################ -->
+      <h1>ABOUT US</h1>
+         <!-- <img class="imgr borderedbox inspace-5" src="assets/images/LOGO.png" alt=""> -->
+      <p>Vitar Estate Development Inc. is a family owned business. It offers residential, commercial and parking spaces for everyone.</p>
+      <p>The family started the business in year 1965.</p>
+      <p>Despite the growing demands of people for residential, commercial and parking spaces. The price rate of Vitar's rental spaces is better than others.</p>
+      <p>Share our website in social media!!!</p>
+      <ul>
+      <li><div class="fb-share-button" data-href="https://vitar-estate-inc.herokuapp.com/" data-layout="button_count"></div></li>
+      <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+      <li><div class="g-plus" data-action="share" ></div></li>
+      </ul>
+</div>
+      <!-- ################################################################################################ -->
+
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
-      <nav class="pagination">
-        <ul>
-          <li><a href="residential.php?offset=<?php echo $offset > $limit ? $offset-$limit : 0 ?>">&laquo; Previous</a></li>
-          <li><a class="current"><strong>1</strong></a></li>
-          <li><a href="residential.php?offset=<?php echo $offset = $limit ?>">Next &raquo;</a></li>
-        </ul>
-      </nav>
+
       <!-- ################################################################################################ -->
     </div>
     <!-- ################################################################################################ -->
@@ -177,5 +146,14 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.backtotop.js"></script>
 <script src="assets/js/jquery.mobilemenu.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>
