@@ -8,7 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Vitar Estate| Parking</title>
+<title>Vitar Estate | Parking</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="assets/css/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -39,6 +39,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="residential.php">Residential</a></li>
             <li class="active"><a href="parking.php">Parking</a></li>
             <li><a href="visit.php">Schedule Unit Visit!</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
             <?php
             session_start();
             if(isset($_SESSION['user'])){
